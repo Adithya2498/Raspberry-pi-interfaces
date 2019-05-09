@@ -1,0 +1,14 @@
+import spidev
+spi = spidev.SpiDev()
+spi.open(bus, device)
+
+# Settings (for example)
+spi.max_speed_hz = 5000
+spi.mode = 0b01
+
+to_send = [0x00, 0x00, 0x00]  // this can be any value
+spi.xfer(to_send)
+from time import sleep
+sleep(3)
+to_send = [0x01]
+spi.xfer(to_send)
