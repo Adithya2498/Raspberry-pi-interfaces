@@ -1,0 +1,7 @@
+#prerequisite
+git clone https://github.com/doceme/py-spidev.git
+cd py-spidev
+make
+sudo make install
+
+->>above steps installs spidev
